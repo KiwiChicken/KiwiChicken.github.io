@@ -22,12 +22,13 @@
    */
 
   /* gradient */
-
+  /* for testimodal icons */
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    hsl(0, 0%, 0%) 97%
   );
+  /* for interests */
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
     hsla(240, 1%, 18%, 0.251) 0%, 
@@ -40,19 +41,23 @@
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
+    hsla(240, 100%, 50%, 0.251) 0%, 
     hsla(35, 100%, 68%, 0) 59.86%
   ), hsl(240, 2%, 13%);
+  /* for icon borders */
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(0, 0%, 25%) 0%, 
     hsla(0, 0%, 25%, 0) 50%
   );
+  /* for bars and resume items */
   --text-gradient-yellow: linear-gradient(
     to right, 
     hsl(45, 100%, 72%), 
     hsl(35, 100%, 68%)
   );
+  
+  
 
   /* solid */
 
@@ -69,6 +74,7 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
+  
   /**
    * typography
    */
@@ -155,7 +161,7 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { background: var(--light-gray); }
 
 
 
@@ -1878,5 +1884,41 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 */
 
   .timeline-text { max-width: 700px; }
+
+  /* Footer styling */
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    transform: translateY(100%); /* Initially hide the footer */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+    z-index: 1000;
+}
+
+/* When footer is hovered, keep it visible */
+footer:hover {
+    transform: translateY(0%);
+}
+
+/* Trigger area to reveal the footer */
+.footer-trigger {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Height of the trigger area */
+    z-index: 999; /* Ensure it's above other content but below the footer */
+}
+
+/* When hovering over the trigger area, show the footer */
+.footer-trigger:hover + footer,
+footer:hover {
+    transform: translateY(0%);
+}
 
 }
