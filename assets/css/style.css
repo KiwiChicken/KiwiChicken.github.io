@@ -56,7 +56,11 @@
     hsl(45, 100%, 72%), 
     hsl(35, 100%, 68%)
   );
-  
+  --text-gradient-deep-blue: linear-gradient(
+    to right, 
+    hsl(188, 100%, 29%), 
+    hsl(210, 100%, 30%)
+  );
   
 
   /* solid */
