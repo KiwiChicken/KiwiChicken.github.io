@@ -73,6 +73,7 @@
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --deep-blue: hsl(210, 100%, 30%);
 
   
   /**
@@ -867,13 +868,17 @@ main {
   border-radius: 10px;
 }
 
-.skill-progress-fill {
+.program-skill-progress-fill {
   background: var(--text-gradient-yellow);
   height: 100%;
   border-radius: inherit;
 }
 
-
+.other-skill-progress-fill {
+  background: var(--deep-blue);
+  height: 100%;
+  border-radius: inherit;
+}
 
 
 
